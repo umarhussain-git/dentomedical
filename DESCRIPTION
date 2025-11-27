@@ -1,0 +1,27 @@
+Package: dentomedical
+Title: Advanced Descriptive and Bivariate Analysis Tools for Medical and Clinical Data
+Version: 0.0.0.9000
+Authors@R: 
+    person("Umar", "Hussain", email = "umar.hussain@gmail.com", 
+           role = c("aut", "cre"))
+Description: 
+    The 'dentomedical' package provides a comprehensive suite of tools for 
+    medical, dental, and clinical research analytics. It offers automated 
+    descriptive statistics, normality assessment, and bivariate analysis with 
+    intelligent test selection tailored to variable type and study design. 
+    The package also delivers clean, structured, and publication-ready summary 
+    tables using 'flextable', ensuring that results are clear, reproducible, 
+    and suitable for manuscripts and reports. Built upon the tidy principles of 
+    'dplyr' and 'tidyr', 'dentomedical' streamlines data handling and enhances 
+    the efficiency of quantitative research workflows.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    dplyr,
+    flextable,
+    stats,
+    broom,
+    tidyr,
+    purrr
