@@ -1,13 +1,13 @@
 # dentomedical
 
-**Advanced Descriptive and Bivariate Analysis Tools for Medical and Clinical Data**
+**Advanced Descriptive, Bivariate  and regression Analysis Tools for Medical and Clinical Data**
 
 ---
 
 ## 🎯 What is dentomedical
 
 `dentomedical` is an R package built for **medical, dental, and clinical researchers** who want to streamline their data analysis.  
-It provides **automated summary statistics, normality testing, and bivariate analysis**, with intelligent test selection based on variable types and distributions.  
+It provides **automated summary statistics, normality testing, Bivariate  and regression analysis**, with intelligent test selection based on variable types and distributions.  
 All outputs are formatted into **clean, publication‑ready tables** (via `flextable`), making it easy to include results directly in manuscripts, reports, or thesis documents.  
 
 ---
@@ -18,7 +18,8 @@ All outputs are formatted into **clean, publication‑ready tables** (via `flext
 - Intelligent selection of statistical tests:
   - Continuous variables: t‑test, Wilcoxon, ANOVA, or Kruskal–Wallis.  
   - Categorical variables: Chi‑square or Fisher’s exact test.  
-- Normality assessment via Shapiro–Wilk test (with safe handling of large sample sizes).  
+- Normality assessment via Shapiro–Wilk test (with safe handling of large sample sizes).
+- Uni- and multivaraite analyses 
 - Publication‑ready output tables using `flextable`.  
 - Built with tidy workflows in mind (`dplyr`, `tidyr`, `tibble`).  
 
