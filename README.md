@@ -49,6 +49,15 @@ sum.stat.p(CO2, by = "Type", statistic = "med_iqr")
 ## 3. Force specific test (e.g. Wilcoxon for two-group comparison)
 sum.stat.p(CO2, by = "Type", statistic = "med_iqr", test_type = "wilcox")
 ```
+
+```r
+library(dentomedical)
+# uni- and multivaiate liner regression
+#Example using built-in iris dataset
+linreg(iris, outcome = "Sepal.Length",
+       predictors = c("Sepal.Width", "Petal.Length", "Species"))
+```
+
 🧰 Dependencies
 
 dentomedical relies on the following R packages:
