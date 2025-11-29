@@ -73,7 +73,7 @@ These dependencies are declared in the DESCRIPTION, so installation should handl
 👤 Author & Maintainer
 
 Umar Hussain
-📧 umar.hussain@gmail.com
+📧 drumarhussain@gmail.com
 
 📄 License
 
