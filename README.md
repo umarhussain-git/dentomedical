@@ -1,29 +1,33 @@
 # dentomedical
 
-**Advanced Descriptive, Bivariate  and regression Analysis Tools for Medical and Clinical Data**
+**Publication-Ready Descriptive, Bivariate, Regression, and Diagnostic Accuracy Tools for Medical and Dental Data**
 
 ---
 
 ## 🎯 What is dentomedical
 
-`dentomedical` is an R package built for **medical, dental, and clinical researchers** who want to streamline their data analysis.  
-It provides **automated summary statistics, normality testing, Bivariate  and regression analysis**, with intelligent test selection based on variable types and distributions.  
-All outputs are formatted into **clean, publication‑ready tables** (via `flextable`), making it easy to include results directly in manuscripts, reports, or thesis documents.  
+The 'dentomedical' package provides a comprehensive suite of tools for
+ medical and dental research. It includes automated descriptive statistics,
+ bivariate analysis with intelligent test selection, logistic regression,
+ and diagnostic accuracy assessment. All functions generate structured,
+ publication-ready tables using 'flextable', ensuring reproducibility and
+ clarity suitable for manuscripts, reports, and clinical research workflows.
 
----
 
-## 🚀 Features
+## 🚀 Features of dentomedical
 
-- Automatically summarises both numeric and categorical variables.  
-- Intelligent selection of statistical tests:
-  - Continuous variables: t‑test, Wilcoxon, ANOVA, or Kruskal–Wallis.  
-  - Categorical variables: Chi‑square or Fisher’s exact test.  
-- Normality assessment via Shapiro–Wilk test (with safe handling of large sample sizes).
-- Uni- and multivaraite analyses 
-- Publication‑ready output tables using `flextable`.  
-- Built with tidy workflows in mind (`dplyr`, `tidyr`, `tibble`).  
+* Automatically summarizes both numeric and categorical variables.
+* Intelligent selection of statistical tests:
 
----
+  * Continuous variables: t‑test, Wilcoxon, ANOVA, or Kruskal–Wallis.
+  * Categorical variables: Chi‑square or Fisher’s exact test.
+* Normality assessment via Shapiro–Wilk test (with safe handling of large sample sizes).
+* Uni‑ and multivariate regression analyses (logistic and linear regression) with formatted ORs, CIs, and p-values.
+* Diagnostic accuracy metrics for medical tests, including sensitivity, specificity, and predictive values.
+* Publication‑ready output tables using `flextable`.
+* Built with tidy workflows in mind (`dplyr`, `tidyr`, `tibble`).
+* Designed for reproducible, CRAN-ready medical and clinical data analyses.
+ ---
 
 ## 📦 Installation
 
@@ -36,6 +40,7 @@ if (!requireNamespace("remotes", quietly = TRUE)) {
 }
 remotes::install_github("umarhussain-git/dentomedical")
 ```
+
 ```r
 library(dentomedical)
 
@@ -52,10 +57,24 @@ sum.stat.p(CO2, by = "Type", statistic = "med_iqr", test_type = "wilcox")
 
 ```r
 library(dentomedical)
-# uni- and multivaiate liner regression
+# uni- and multivaiate linear regression
 #Example using built-in iris dataset
 linreg(iris, outcome = "Sepal.Length",
        predictors = c("Sepal.Width", "Petal.Length", "Species"))
+```
+
+```r
+# uni- and multivaiate logistic regression
+logreg(data=medical_data(), outcome="case" ,
+   predictors= c("age" ,  "parity" ,    "induced" ))
+```
+```r
+# Diagnostic accuracy
+diagnostic_data <- data.frame(
+  test = c("positive","negative","positive","negative","positive","negative","positive","negative"),
+  goldstandard = c("positive","positive","negative","negative","positive","negative","positive","negative")
+)
+diag_accuracy(diagnostic_data, test_col = "test", gold_col = "goldstandard")
 ```
 
 🧰 Dependencies
@@ -64,7 +83,7 @@ dentomedical relies on the following R packages:
 
 dplyr, tidyr, tibble — for data manipulation
 
-flextable — for formatted tables
+flextable m=, broom— for formatted tables
 
 stats (base) — for statistical tests
 
@@ -94,8 +113,6 @@ automate the routine summarization and testing,
 
 get instantly formatted tables,
 
-avoid manual copying/pasting errors,
-
-and produce output ready for publishing or reporting.
+and avoid manual copying/pasting errors
 
 Let the package do the heavy lifting — you focus on interpreting the data.
