@@ -67,6 +67,11 @@ linreg(iris, outcome = "Sepal.Length",
 # uni- and multivaiate logistic regression
 logreg(data=medical_data(), outcome="case" ,
    predictors= c("age" ,  "parity" ,    "induced" ))
+
+# *Note*: please make sure your all categorical variable should in factor
+# if not then run this cod first (lets say your data name is 'df'
+df <- df %>%
+  mutate(across(where(is.character), as.factor))
 ```
 ```r
 # Diagnostic accuracy
