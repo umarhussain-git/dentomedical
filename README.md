@@ -68,8 +68,8 @@ linreg(iris, outcome = "Sepal.Length",
 logreg(data=medical_data(), outcome="case" ,
    predictors= c("age" ,  "parity" ,    "induced" ))
 
-# *Note*: please make sure your all categorical variable should in factor
-# if not then run this cod first (lets say your data name is 'df'
+# *Note*: please make sure your all categorical variables should be  factor (ordinal)
+# if not then run this code first (lets say your data name is 'df')
 df <- df %>%
   mutate(across(where(is.character), as.factor))
 ```
