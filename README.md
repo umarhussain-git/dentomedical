@@ -34,11 +34,8 @@ The 'dentomedical' package provides a comprehensive suite of tools for
 You can install the development version directly from GitHub:
 
 ```r
-# install remotes if not already installed
-if (!requireNamespace("remotes", quietly = TRUE)) {
-  install.packages("remotes")
-}
-remotes::install_github("umarhussain-git/dentomedical")
+
+install.packages("dentomedical")
 ```
 
 ```r
