@@ -45,14 +45,14 @@ remotes::install_github("umarhussain-git/dentomedical")
 library(dentomedical)
 
 ## 1. Normality Test Summary for numeric variables
-norm.sum(iris)
+norm_sum(iris)
 
 ## 2. Summary table with p‑values (bivariate analysis)
 # Example using built-in dataset CO2
-sum.stat.p(CO2, by = "Type", statistic = "med_iqr")
+sum_stat.p(CO2, by = "Type", statistic = "med_iqr")
 
 ## 3. Force specific test (e.g. Wilcoxon for two-group comparison)
-sum.stat.p(CO2, by = "Type", statistic = "med_iqr", test_type = "wilcox")
+sum_stat.p(CO2, by = "Type", statistic = "med_iqr", test_type = "wilcox")
 ```
 
 ```r
