@@ -38,6 +38,9 @@ You can install the development version directly from GitHub:
 install.packages("dentomedical")
 ```
 
+# read its guide on Rpubs
+https://rpubs.com/umarhussain/1378450
+
 ```r
 library(dentomedical)
 
