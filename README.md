@@ -33,6 +33,12 @@ The 'dentomedical' package provides a comprehensive suite of tools for
 
 You can install the development version directly from GitHub:
 
+# download new version of the dentomedical package
+```r
+# install.packages("devtools")
+devtools::install_github("umarhussain-git/dentomedical1")
+```
+
 ```r
 
 install.packages("dentomedical")
