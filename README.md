@@ -38,7 +38,7 @@ You can install the development version directly from GitHub:
 # install.packages("devtools")
 devtools::install_github("umarhussain-git/dentomedical1")
 ```
-# old versison 
+# old version 
 ```r
 
 install.packages("dentomedical")
